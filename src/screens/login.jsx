@@ -12,7 +12,8 @@ const Login = () => {
       <input className="loginInput"></input>
       <button className="loginButton">Entrar</button>
 
-      <label className="loginLabel">Não tem conta?<strong> Cadastre-se</strong></label>
+      <Link to="/signIn" className="loginLabel">Não tem conta? Cadastre-se</Link>
+
   </div>
   
   )
