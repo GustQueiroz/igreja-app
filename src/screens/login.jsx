@@ -26,6 +26,7 @@ const LoginForm = styled.div`
     background-color: rgb(2, 161, 2);
     color: #fff;
     border: 0px;
+    cursor: pointer;
   }
 `;
 

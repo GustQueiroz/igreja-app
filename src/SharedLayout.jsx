@@ -5,7 +5,7 @@ import ToggleButton from "./components/ToggleButton";
 const SharedLayout = ({ children, themeToggler }) => {
   return (
     <div className="container">
-      <img className="logo" src={SantosLogo} alt="Descrição da imagem" />
+      <img className="logo" src={SantosLogo} alt="logo" />
       {children}
       <ToggleButton onClick={themeToggler} />
     </div>
