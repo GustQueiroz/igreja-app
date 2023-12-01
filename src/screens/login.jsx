@@ -16,7 +16,6 @@ const LoginForm = styled.div`
     height: 30px;
     border: 1px solid ${({ theme }) => theme.fontColor};
     color: ${({ theme }) => theme.fontColor};
-    /* Adicione outros estilos conforme necessário */
   }
 
   .loginButton {
@@ -27,7 +26,6 @@ const LoginForm = styled.div`
     background-color: rgb(2, 161, 2);
     color: #fff;
     border: 0px;
-    /* Adicione outros estilos conforme necessário */
   }
 `;
 
