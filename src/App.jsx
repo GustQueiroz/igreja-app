@@ -1,29 +1,25 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { GlobalStyles } from "./GlobalStyles";
 import { lightTheme, darkTheme } from "./theme";
-import ToggleButton from "./components/ToggleButton";
+import SharedLayout from "./SharedLayout";
 import Login from "./screens/login";
 import SignIn from "./screens/signIn";
-import SantosLogo from "./imgs/Santos_Logo.png";
 import "./App.css";
 
 function Home({ themeToggler }) {
   return (
-    <div className="container">
-      <img className="logo" src={SantosLogo} alt="Descrição da imagem" />
+    <SharedLayout themeToggler={themeToggler}>
       <Login />
-      <ToggleButton onClick={themeToggler} />
-    </div>
+    </SharedLayout>
   );
 }
 
 function App() {
   const [theme, setTheme] = useState("light");
   const themeToggler = () => {
-    setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   return (
@@ -32,7 +28,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home themeToggler={themeToggler} />} />
-          <Route path="/signIn" element={<SignIn />} />
+          <Route path="/signIn" element={<SharedLayout themeToggler={themeToggler}><SignIn /></SharedLayout>} />
         </Routes>
       </Router>
     </ThemeProvider>
