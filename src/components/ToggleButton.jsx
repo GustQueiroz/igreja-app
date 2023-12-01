@@ -27,7 +27,7 @@ const ToggleButton = ({ onClick }) => {
   const toggleSwitch = () => {
     setIsOn((prev) => !prev);
     if (onClick && typeof onClick === 'function') {
-      onClick(); // Chama a função passada como propriedade (themeToggler)
+      onClick();
     }
   };
 

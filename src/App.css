@@ -1,4 +1,4 @@
-.app {
+.container {
     margin-top: 200px;
     display: flex;
     gap: 20px;
@@ -14,4 +14,8 @@ body {
     font-family: Arial, Helvetica, sans-serif, Times, serif;
     overflow-y: hidden;
     overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: rgb(2, 161, 2);
 }
